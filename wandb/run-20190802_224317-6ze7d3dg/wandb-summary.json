@@ -1,0 +1,162 @@
+{
+    "graph": {
+        "_type": "graph",
+        "format": "keras",
+        "nodes": [
+            {
+                "name": "conv2d_1_input",
+                "id": "conv2d_1_input",
+                "class_name": "InputLayer",
+                "output_shape": [
+                    null,
+                    40,
+                    20,
+                    1
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "conv2d_1",
+                "id": "conv2d_1",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    38,
+                    18,
+                    32
+                ],
+                "num_parameters": 320
+            },
+            {
+                "name": "max_pooling2d_1",
+                "id": "max_pooling2d_1",
+                "class_name": "MaxPooling2D",
+                "output_shape": [
+                    null,
+                    19,
+                    9,
+                    32
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "flatten_1",
+                "id": "flatten_1",
+                "class_name": "Flatten",
+                "output_shape": [
+                    null,
+                    5472
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_1",
+                "id": "dense_1",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    100
+                ],
+                "num_parameters": 547300
+            },
+            {
+                "name": "dropout_1",
+                "id": "dropout_1",
+                "class_name": "Dropout",
+                "output_shape": [
+                    null,
+                    100
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_2",
+                "id": "dense_2",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    3
+                ],
+                "num_parameters": 303
+            }
+        ],
+        "edges": [
+            [
+                "conv2d_1_input",
+                "conv2d_1"
+            ],
+            [
+                "conv2d_1",
+                "max_pooling2d_1"
+            ],
+            [
+                "max_pooling2d_1",
+                "flatten_1"
+            ],
+            [
+                "flatten_1",
+                "dense_1"
+            ],
+            [
+                "dense_1",
+                "dropout_1"
+            ],
+            [
+                "dropout_1",
+                "dense_2"
+            ]
+        ]
+    },
+    "val_acc": 0.9152215845552713,
+    "epoch": 49,
+    "_runtime": 22.552396535873413,
+    "loss": 0.16473353496132595,
+    "acc": 0.9283419055313561,
+    "val_loss": 0.36427357416018585,
+    "_timestamp": 1564785819.4986868,
+    "examples": {
+        "width": 20,
+        "height": 40,
+        "count": 36,
+        "_type": "images",
+        "captions": [
+            "bed",
+            "cat",
+            "bed",
+            "happy",
+            "cat",
+            "cat",
+            "bed",
+            "bed",
+            "cat",
+            "happy",
+            "cat",
+            "bed",
+            "cat",
+            "cat",
+            "bed",
+            "cat",
+            "cat",
+            "happy",
+            "bed",
+            "cat",
+            "happy",
+            "happy",
+            "cat",
+            "happy",
+            "cat",
+            "cat",
+            "happy",
+            "cat",
+            "bed",
+            "cat",
+            "happy",
+            "cat",
+            "bed",
+            "happy",
+            "cat",
+            "happy"
+        ]
+    },
+    "_step": 49
+}

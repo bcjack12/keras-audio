@@ -1,0 +1,48 @@
+diff --git a/train.py b/train.py
+index 04828ee..b7c79f7 100644
+--- a/train.py
++++ b/train.py
+@@ -10,8 +10,8 @@ from wandb.keras import WandbCallback
+ wandb.init()
+ config = wandb.config
+ 
+-config.max_len = 11
+-config.buckets = 20
++config.max_len = 20#11
++config.buckets = 40#20
+ 
+ 
+ # Cache pre-processed data
+@@ -39,7 +39,32 @@ y_train_hot = to_categorical(y_train)
+ y_test_hot = to_categorical(y_test)
+ 
+ model = Sequential()
++
++model.add(Conv2D(32,
++                 (3,3),#(config.first_layer_conv_width, config.first_layer_conv_height),#(3,3)
++                 input_shape=(40, 20, 1),
++                 activation='relu'))
++model.add(MaxPooling2D())
++
++
+ model.add(Flatten(input_shape=(config.buckets, config.max_len, channels)))
++
++#model.add(Flatten())
++model.add(Dense(100, activation='relu'))
++model.add(Dropout(0.4))
++model.add(Dense(50, activation='relu'))
++model.add(Dropout(0.3))
++
++#recurrent nets
++#convolution - need to do permute? time is first index (y axis)
++#data augmentation - add noise
++
++
++#https://app.wandb.ai/qualcomm/audio-aug2/runs/dfpeckhb/model
++
++
++
++
+ model.add(Dense(num_classes, activation='softmax'))
+ model.compile(loss="categorical_crossentropy",
+               optimizer="adam",

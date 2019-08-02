@@ -1,0 +1,26 @@
+{
+    "root": "/home/jackyang/keras-audio",
+    "program": "train.py",
+    "git": {
+        "remote": "https://github.com/lukas/keras-audio",
+        "commit": "9580abae36450fc0295e6c9c1b92bbc8eb98ea04"
+    },
+    "email": "bcjack@hotmail.com",
+    "startedAt": "2019-08-02T23:03:26.999154",
+    "host": "jupyter-jackyang",
+    "username": "jackyang",
+    "os": "Linux-4.14.127+-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.6.8",
+    "executable": "/usr/local/bin/python",
+    "gpu": "Tesla K80",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": "10.0.130",
+    "args": [],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "project": "audio-aug2",
+    "heartbeatAt": "2019-08-02T23:03:54.900409",
+    "exitcode": 0
+}

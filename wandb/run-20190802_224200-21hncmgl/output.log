@@ -1,0 +1,19 @@
+WARNING: Logging before flag parsing goes to stderr.
+W0802 22:42:02.115748 140121566082880 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:74: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+W0802 22:42:02.132521 140121566082880 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:517: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+W0802 22:42:02.135975 140121566082880 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4138: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+W0802 22:42:02.151545 140121566082880 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3976: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+Traceback (most recent call last):
+  File "train.py", line 52, in <module>
+    model.add(Flatten())
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/sequential.py", line 181, in add
+    output_tensor = layer(self.outputs[0])
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/base_layer.py", line 414, in __call__
+    self.assert_input_compatibility(inputs)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/base_layer.py", line 327, in assert_input_compatibility
+    str(K.ndim(x)))
+ValueError: Input 0 is incompatible with layer flatten_2: expected min_ndim=3, found ndim=2

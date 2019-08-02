@@ -1,0 +1,194 @@
+{
+    "graph": {
+        "_type": "graph",
+        "format": "keras",
+        "nodes": [
+            {
+                "name": "conv2d_1_input",
+                "id": "conv2d_1_input",
+                "class_name": "InputLayer",
+                "output_shape": [
+                    null,
+                    50,
+                    25,
+                    1
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "conv2d_1",
+                "id": "conv2d_1",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    48,
+                    23,
+                    32
+                ],
+                "num_parameters": 320
+            },
+            {
+                "name": "max_pooling2d_1",
+                "id": "max_pooling2d_1",
+                "class_name": "MaxPooling2D",
+                "output_shape": [
+                    null,
+                    24,
+                    11,
+                    32
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "conv2d_2",
+                "id": "conv2d_2",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    22,
+                    9,
+                    32
+                ],
+                "num_parameters": 9248
+            },
+            {
+                "name": "max_pooling2d_2",
+                "id": "max_pooling2d_2",
+                "class_name": "MaxPooling2D",
+                "output_shape": [
+                    null,
+                    11,
+                    4,
+                    32
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "flatten_1",
+                "id": "flatten_1",
+                "class_name": "Flatten",
+                "output_shape": [
+                    null,
+                    1408
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_1",
+                "id": "dense_1",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    100
+                ],
+                "num_parameters": 140900
+            },
+            {
+                "name": "dropout_1",
+                "id": "dropout_1",
+                "class_name": "Dropout",
+                "output_shape": [
+                    null,
+                    100
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_2",
+                "id": "dense_2",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    3
+                ],
+                "num_parameters": 303
+            }
+        ],
+        "edges": [
+            [
+                "conv2d_1_input",
+                "conv2d_1"
+            ],
+            [
+                "conv2d_1",
+                "max_pooling2d_1"
+            ],
+            [
+                "max_pooling2d_1",
+                "conv2d_2"
+            ],
+            [
+                "conv2d_2",
+                "max_pooling2d_2"
+            ],
+            [
+                "max_pooling2d_2",
+                "flatten_1"
+            ],
+            [
+                "flatten_1",
+                "dense_1"
+            ],
+            [
+                "dense_1",
+                "dropout_1"
+            ],
+            [
+                "dropout_1",
+                "dense_2"
+            ]
+        ]
+    },
+    "examples": {
+        "width": 25,
+        "height": 50,
+        "count": 36,
+        "_type": "images",
+        "captions": [
+            "happy",
+            "happy",
+            "bed",
+            "cat",
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "cat",
+            "bed",
+            "bed",
+            "happy",
+            "bed",
+            "happy",
+            "happy",
+            "happy",
+            "happy",
+            "cat",
+            "bed",
+            "bed",
+            "happy",
+            "bed",
+            "cat",
+            "bed",
+            "bed",
+            "happy",
+            "cat",
+            "happy",
+            "bed",
+            "cat",
+            "cat",
+            "happy",
+            "cat",
+            "bed",
+            "bed",
+            "happy"
+        ]
+    },
+    "loss": 0.011943349359463661,
+    "_timestamp": 1564787033.673935,
+    "epoch": 49,
+    "_step": 49,
+    "acc": 0.9967866354552517,
+    "_runtime": 26.97070336341858,
+    "val_loss": 0.34371413014872226,
+    "val_acc": 0.9364161857750145
+}

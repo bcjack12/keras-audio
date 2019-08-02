@@ -1,0 +1,25 @@
+Using CUDA for RNN layers
+WARNING: Logging before flag parsing goes to stderr.
+W0802 22:59:32.510340 139646850512704 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:74: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+W0802 22:59:32.512319 139646850512704 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:517: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+W0802 22:59:32.515649 139646850512704 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4138: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+W0802 22:59:32.532482 139646850512704 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3976: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+W0802 22:59:32.582281 139646850512704 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:133: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+W0802 22:59:32.590798 139646850512704 deprecation.py:506] From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Traceback (most recent call last):
+  File "train.py", line 93, in <module>
+    activation='relu'))
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/sequential.py", line 181, in add
+    output_tensor = layer(self.outputs[0])
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/base_layer.py", line 414, in __call__
+    self.assert_input_compatibility(inputs)
+  File "/usr/local/lib/python3.6/dist-packages/keras/engine/base_layer.py", line 311, in assert_input_compatibility
+    str(K.ndim(x)))
+ValueError: Input 0 is incompatible with layer conv1d_1: expected ndim=3, found ndim=2

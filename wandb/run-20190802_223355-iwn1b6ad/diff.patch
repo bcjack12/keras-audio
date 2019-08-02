@@ -1,0 +1,27 @@
+diff --git a/train.py b/train.py
+index 04828ee..bd7438d 100644
+--- a/train.py
++++ b/train.py
+@@ -10,8 +10,8 @@ from wandb.keras import WandbCallback
+ wandb.init()
+ config = wandb.config
+ 
+-config.max_len = 11
+-config.buckets = 20
++config.max_len = 20#11
++config.buckets = 40#20
+ 
+ 
+ # Cache pre-processed data
+@@ -40,6 +40,11 @@ y_test_hot = to_categorical(y_test)
+ 
+ model = Sequential()
+ model.add(Flatten(input_shape=(config.buckets, config.max_len, channels)))
++
++
++#recurrent nets
++#convolution - need to do permute? time is first index (y axis)
++
+ model.add(Dense(num_classes, activation='softmax'))
+ model.compile(loss="categorical_crossentropy",
+               optimizer="adam",

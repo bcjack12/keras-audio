@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "train.py", line 38, in <module>
+    X_train.shape[0], config.buckets, config.max_len, channels)
+ValueError: cannot reshape array of size 3890000 into shape (3112,45,20,1)

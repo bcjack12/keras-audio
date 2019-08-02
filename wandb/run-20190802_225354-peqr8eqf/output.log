@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "train.py", line 46, in <module>
+    if 'GPU' in str(device_lib.list_local_devices()):
+NameError: name 'device_lib' is not defined
